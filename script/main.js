@@ -1,21 +1,10 @@
 (() => {
-  //to change the game board
-  let theThumbnails = document.querySelectorAll("#buttonHolder img"),
-      gameBoard = document.querySelector(".puzzle-board");
-
-    function changeBgImg() {
-      //debugger;
-     gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgref}.jpg)`;
-    }
-
-  theThumbnails.forEach(item => item.addEventListener("click", changeBgImg));
-
-
   const pieces = document.querySelectorAll('.puzzle-image');
   const dropzones = document.querySelectorAll('.drop-zone');
 
 
   //to DRAG : DRAGSTART; DRAG; DRAGEND
+  
   pieces.forEach(puzzle => {
     puzzle.addEventListener('dragstart', dragstart);
     puzzle.addEventListener('drag', drag);
@@ -47,7 +36,7 @@
       zone.addEventListener('dragenter', dragenter);
       zone.addEventListener('dragover', dragover);
       zone.addEventListener('dragleave', dragleave);
-      zone.addEventListener('drop', drop);
+
     });
 
   function dragenter(){
@@ -64,22 +53,71 @@
 
   function dragleave(){
     console.log('board> leave');
-
       //this = dropzone
     this.classList.remove('over');
+
   }
 
-  function drop(event) {
-    event.preventDefault();
-		console.log('board> drop on me');
+ const tl = document.querySelector(".tl");
+ const tr = document.querySelector(".tr");
+ const bl = document.querySelector(".bl");
+ const br = document.querySelector(".br");
 
-    this.classList.remove('over');
+function droptl(event) {
+  event.preventDefault();
+  console.log('board> drop on me');
 
-    let droppedEl = event.dataTransfer.getData('currentItem');
-		console.log(droppedEl);
+  this.classList.remove('over');
 
-		this.appendChild(document.querySelector(`.puzzle-image${droppedEl}`));
-	}
+  let droppedEl = event.dataTransfer.getData('currentItem');
+  console.log(droppedEl);
+
+  this.appendChild(document.querySelector(`#topLeft${droppedEl}`));
+}
+
+tl.addEventListener('drop', droptl);
+
+function droptr(event) {
+  event.preventDefault();
+  console.log('board> drop on me');
+
+  this.classList.remove('over');
+
+  let droppedEl = event.dataTransfer.getData('currentItem');
+  console.log(droppedEl);
+
+  this.appendChild(document.querySelector(`#topRight${droppedEl}`));
+}
+
+tr.addEventListener('drop', droptr);
+
+function dropbl(event) {
+  event.preventDefault();
+  console.log('board> drop on me');
+
+  this.classList.remove('over');
+
+  let droppedEl = event.dataTransfer.getData('currentItem');
+  console.log(droppedEl);
+
+  this.appendChild(document.querySelector(`#bottomLeft${droppedEl}`));
+}
+
+bl.addEventListener('drop', dropbl);
+
+function dropbr(event) {
+  event.preventDefault();
+  console.log('board> drop on me');
+
+  this.classList.remove('over');
+
+  let droppedEl = event.dataTransfer.getData('currentItem');
+  console.log(droppedEl);
+
+  this.appendChild(document.querySelector(`#bottomRight${droppedEl}`));
+}
+
+br.addEventListener('drop', dropbr);
 
 
 })();
