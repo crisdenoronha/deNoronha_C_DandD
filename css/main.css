@@ -16,7 +16,7 @@ body {
 	text-align: center;
 }
 
-.puzzle-pieces, .puzzle-board, .puzzle-board1, .puzzle-board2, .puzzle-board3  {
+.puzzle-pieces, .puzzle-board {
 	margin-top: 40px;
 	height: 400px;
 	display: inline-block;
@@ -35,24 +35,6 @@ body {
 .puzzle-board {
 	width:600px;
 	background-image: url('../images/backGround0.jpg');
-	background-repeat: no-repeat;
-}
-
-.puzzle-board1 {
-	width:600px;
-	background-image: url('../images/backGround1.jpg');
-	background-repeat: no-repeat;
-}
-
-.puzzle-board2 {
-	width:600px;
-	background-image: url('../images/backGround2.jpg');
-	background-repeat: no-repeat;
-}
-
-.puzzle-board3 {
-	width:600px;
-	background-image: url('../images/backGround3.jpg');
 	background-repeat: no-repeat;
 }
 
@@ -118,7 +100,6 @@ footer {
 }
 
 #buttonHolder {
-	display: inline-flex;
 	margin: 0px auto;
 	text-align:center;
 }
@@ -133,23 +114,4 @@ footer {
 
 #buttonHolder img:hover {
 	opacity:.5;
-}
-
-/* New classes DRAG and DROP*/
-
-.highlight {
-	background-color: red;
-	color: #ffff;
-	opacity: .5;
-}
-
-.over {
-	background-color: white;
-	color: #ffff;
-	opacity: .5;
-}
-
-.droppuzzle {
-	cursor: move;
-	opacity: 0.3;
 }
