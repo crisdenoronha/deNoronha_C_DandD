@@ -115,22 +115,3 @@ footer {
 #buttonHolder img:hover {
 	opacity:.5;
 }
-
-/* New classes DRAG and DROP*/
-
-.highlight {
-	background-color: red;
-	color: #ffff;
-	opacity: .5;
-}
-
-.over {
-	background-color: white;
-	color: #ffff;
-	opacity: .5;
-}
-
-.droppuzzle {
-	cursor: move;
-	opacity: 0.3;
-}
