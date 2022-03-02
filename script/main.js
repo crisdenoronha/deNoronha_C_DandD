@@ -7,26 +7,6 @@
 
     const puzzlePaths = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
 
-	function changeImgSet() {
-		//debugger;
-		//location.reload();
-		gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgref}.jpg)`;
-
-		//loop all small draggable images
-		puzzlePaths.forEach((img, index) => {
-			puzzlePieces[index].src = `images/${img + this.dataset.bgref}.jpg`;
-
-		});
-
-		let topLeft = document.getElementById("#topLeft");
-		if (topLeft.parentNode) {
-		    topLeft.parentNode.removeChild(topLeft);
-		}
-
-
-	}
-	theThumbnails.forEach(item => item.addEventListener('click', changeImgSet));
-
 	dropZones.forEach(zone => {
 		zone.addEventListener('dragover', allowDragOver);
 	});
@@ -63,7 +43,8 @@
 			this.appendChild(document.querySelector(`#topLeft${droppedEl}`));
 		}
 		else {
-			return false;
+			draggable = false;
+
 		}
 
 	}
@@ -82,7 +63,7 @@
 			this.appendChild(document.querySelector(`#topRight${droppedEl}`));
 		}
 		else {
-			return false;
+			draggable = false;
 		}
 
 	}
@@ -101,7 +82,7 @@
 			this.appendChild(document.querySelector(`#bottomLeft${droppedEl}`));
 		}
 		else {
-			return false;
+			draggable = false;
 		}
 
 	}
@@ -120,12 +101,34 @@
 			this.appendChild(document.querySelector(`#bottomRight${droppedEl}`));
 		}
 		else {
-			return false;
+			draggable = false;
 		}
-	
+
 	}
 
 	br.addEventListener('drop', dropbr);
+
+
+	const puzzle = document.querySelectorAll('.puzzle-image');
+	const zone = document.querySelectorAll('.drop-zone');
+	const puzzlebox = document.querySelectorAll('.puzzle-pieces');
+
+
+	function changeImgSet() {
+
+		zone.removeChild(puzzle);
+		puzzlebox.appendChild(puzzle);
+
+		gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgref}.jpg)`;
+
+		//loop all small draggable images
+		puzzlePaths.forEach((img, index) => {
+			puzzlePieces[index].src = `images/${img + this.dataset.bgref}.jpg`;
+
+		});
+
+	}
+	theThumbnails.forEach(item => item.addEventListener('click', changeImgSet));
 
 
 })();
