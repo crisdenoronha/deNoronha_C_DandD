@@ -7,9 +7,7 @@
 
     const puzzlePaths = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
 
-	dropZones.forEach(zone => {
-		zone.addEventListener('dragover', allowDragOver);
-	});
+
 
 	function dragStrarted(event) {
 		event.preventDefault();
@@ -24,6 +22,8 @@
 		event.preventDefault();
 		console.log('dragged over me');
 	}
+	dropZones.forEach(zone => zone.addEventListener('dragover', allowDragOver));
+
 
 	const tl = document.querySelector(".tl");
 	const tr = document.querySelector(".tr");
@@ -109,24 +109,17 @@
 	br.addEventListener('drop', dropbr);
 
 
-	const puzzle = document.querySelectorAll('.puzzle-image');
-	const zone = document.querySelectorAll('.drop-zone');
-	const puzzlebox = document.querySelectorAll('.puzzle-pieces');
-
-
 	function changeImgSet() {
-
-		zone.removeChild(puzzle);
-		puzzlebox.appendChild(puzzle);
 
 		gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgref}.jpg)`;
 
 		//loop all small draggable images
 		puzzlePaths.forEach((img, index) => {
 			puzzlePieces[index].src = `images/${img + this.dataset.bgref}.jpg`;
-
+            
 		});
 
+	
 	}
 	theThumbnails.forEach(item => item.addEventListener('click', changeImgSet));
 
