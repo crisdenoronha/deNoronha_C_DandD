@@ -4,7 +4,7 @@ Fix de two bugs of the Drag and Drop Puzzle build in class.
 ## Problem 1:
 Only the correct piece should drop into the matching zone, and there should only be one piece in one drop zone at a time.
            
-•	Use the id of each image and the class of each zone to match the correct piece with the correct area in the board.
+•	Use the id of each image and the class of each zone to match the correct piece with the correct area in the board.<br><br>
 •	The function needs to be place inside the drop function.
 
 branch dev.cdn.problem1 : https://github.com/crisdenoronha/deNoronha_C_DandD/tree/dev.cdn.problem1
@@ -12,10 +12,10 @@ branch dev.cdn.problem1 : https://github.com/crisdenoronha/deNoronha_C_DandD/tre
 ## Problem 2:
 Create a resetPuzzlePieces function to solve the problem with pieces appearing in the drop zones on reset.
 
-•	resetPuzzlePieces function:
-    puzzlebox appendChid (.puzzle-image)
+•	resetPuzzlePieces function:<br>
+    puzzlebox appendChid (.puzzle-image)<br><br>
 
-•	put the reset function inside of changeImgSet function
+•	put the reset function inside of changeImgSet function<br>
      resetPuzzlePieces();
 
 branch dev.cdn.problem2 : https://github.com/crisdenoronha/deNoronha_C_DandD/tree/dev.cdn.problem2
