@@ -22,14 +22,14 @@ branch dev.cdn.problem2 : https://github.com/crisdenoronha/deNoronha_C_DandD/tre
 
 ## Reseach:
 Drag and Drop Videos:
-https://www.youtube.com/watch?v=6wn8hpUcEcM
-https://www.youtube.com/watch?v=UAkCVwhzaG4&t=604s
-https://www.youtube.com/watch?v=OHTudicK7nY
+https://www.youtube.com/watch?v=6wn8hpUcEcM <br>
+https://www.youtube.com/watch?v=UAkCVwhzaG4&t=604s <br>
+https://www.youtube.com/watch?v=OHTudicK7nY <br>
 
 Drag and Drop References:
-https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
-https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
-https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
+https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API <br>
+https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild <br>
+https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild <br>
 
 ## Homework made by:
 Crisitne de Noronha
