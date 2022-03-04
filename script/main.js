@@ -44,11 +44,9 @@
 		}
 		else {
 			draggable = false;
-
 		}
 
 	}
-
 	tl.addEventListener('drop', droptl);
 
 	function droptr(event) {
@@ -67,7 +65,6 @@
 		}
 
 	}
-
 	tr.addEventListener('drop', droptr);
 
 	function dropbl(event) {
@@ -86,7 +83,6 @@
 		}
 
 	}
-
 	bl.addEventListener('drop', dropbl);
 
 	function dropbr(event) {
@@ -105,23 +101,23 @@
 		}
 
 	}
-
 	br.addEventListener('drop', dropbr);
-
 
 	function changeImgSet() {
 
 		gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgref}.jpg)`;
-
 		//loop all small draggable images
 		puzzlePaths.forEach((img, index) => {
 			puzzlePieces[index].src = `images/${img + this.dataset.bgref}.jpg`;
-            
 		});
-
-	
+	  resetPuzzlePieces();
 	}
 	theThumbnails.forEach(item => item.addEventListener('click', changeImgSet));
 
+	const puzzlebox = document.querySelector('#board');
+	function resetPuzzlePieces(){
+		puzzlebox.appendChild(document.querySelectorAll('.puzzle-image'));
+	}
+	dropZones.forEach(zone => zone.addEventListener('drop', resetPuzzlePieces));
 
 })();
