@@ -13,7 +13,7 @@
 	</header>
 	<section id="game-boards">
 		<!-- these are the draggable pieces -->
-		<div class="puzzle-pieces">
+		<div id="puzzleBoard" class="puzzle-pieces">
 			<img id="topLeft" draggable="true"  src="images/topLeft0.jpg" class="puzzle-image" alt="top left">
 			<img id="topRight" draggable="true"  src="images/topRight0.jpg" class="puzzle-image" alt="top right">
 			<img id="bottomLeft" draggable="true"  src="images/bottomLeft0.jpg" class="puzzle-image" alt="bottom left">
@@ -21,7 +21,7 @@
 		</div>
 
 		<!-- we want to drop the draggable pieces here -->
-		<div class="puzzle-board">
+		<div id="board" class="puzzle-board">
 			<div class="drop-zone tl" data-id="topLeft"></div>
 			<div class="drop-zone tr" data-id="topRight"></div>
 			<div class="drop-zone bl" data-id="bottomLeft"></div>
