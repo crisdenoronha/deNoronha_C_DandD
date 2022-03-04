@@ -21,12 +21,12 @@ Create a resetPuzzlePieces function to solve the problem with pieces appearing i
 branch dev.cdn.problem2 : https://github.com/crisdenoronha/deNoronha_C_DandD/tree/dev.cdn.problem2
 
 ## Reseach:
-Drag and Drop Videos:
+Drag and Drop Videos:<br>
 https://www.youtube.com/watch?v=6wn8hpUcEcM <br>
 https://www.youtube.com/watch?v=UAkCVwhzaG4&t=604s <br>
 https://www.youtube.com/watch?v=OHTudicK7nY <br>
 
-Drag and Drop References:
+Drag and Drop References:<br>
 https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API <br>
 https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild <br>
 https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild <br>
