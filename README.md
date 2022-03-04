@@ -4,8 +4,8 @@ Fix de two bugs of the Drag and Drop Puzzle build in class.
 ## Problem 1:
 Only the correct piece should drop into the matching zone, and there should only be one piece in one drop zone at a time.
            
-●	Use the id of each image and the class of each zone to match the correct piece with the correct area in the board.
-●	The function needs to be place inside the drop function.
+•	Use the id of each image and the class of each zone to match the correct piece with the correct area in the board.
+•	The function needs to be place inside the drop function.
 
 branch dev.cdn.problem1 : https://github.com/crisdenoronha/deNoronha_C_DandD/tree/dev.cdn.problem1
 
